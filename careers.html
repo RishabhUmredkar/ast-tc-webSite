@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Asterisc - Startup Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        @media (min-width: 992px) {
+            .abc {
+                flex: 0 0 auto;
+                width: 24.33333%;
+            }
+        }
+
+
+
+        @media (max-width: 991.98px) {
+            .navbar, .navbar-expand-lg, .navbar-dark, .px-5 .py-3 .py-lg-0{
+                background-color: #372c37 ;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="">
+                <div class="d-inline-flex align-items-center" style="height: 55px;">
+                    <a class="me-3 text-light"><i class="fa fa-briefcase -alt me-2"></i>Nagpur's Leading Website Design
+                        & Digital Marketing Company</a>
+                    <a class="me-3 text-light" href="tel: 91-7744822228"><i
+                            class="fa fa-phone-alt me-2"></i>+91-7744822228</a>
+                    <a class="text-light" href="mailto: hello@asterisc.com"><i
+                            class="fa fa-envelope-open me-2"></i>hello@asterisc.in</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <b>
+                    <p>Asterisc<span style="color: rgb(128, 0, 128);padding: 0;">Technocrat</span></p>
+                </b></li>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+                   
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="service.html" class="nav-item nav-link ">Service</a>
+                    <a href="careers.html" class="nav-item nav-link active">Careers</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="feature.html" class="nav-item nav-link">Our Features</a>
+                    <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
+
+
+
+                </div>
+                </div>
+        </nav>
+
+        <div id="header-carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/career.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5> -->
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Career</h1>
+                            <a href="#form1" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free
+                                Quote</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact
+                                Us</a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+
+                <div class="abc col-lg-4 wow zoomIn" data-wow-delay="0.01s">
+                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-primary mb-0">Customers</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">100</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class=" abc col-lg-4 wow zoomIn" data-wow-delay="0.01s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-users text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Happy Clients</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">70</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="abc col-lg-4 wow zoomIn" data-wow-delay="0.02s">
+                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-primary mb-0">Projects Complete</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">50</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="abc col-lg-4 wow zoomIn" data-wow-delay="0.02s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Coffee With Clients</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">250</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Facts Start -->
+
+    <center>
+
+        <div class="info">
+
+            <h2>Want to join Us?</h2>
+
+            <p style="margin-left: 100px; margin-right: 100px; margin-bottom: 50px;"> This page is our personal
+                favourite page of our website.
+                Why? Because this page connects us with some of the best people that we get to work with and grow with.
+                Do you think you are one surrounded by the best in what you do?
+                Are you someone who loves to take responsibilities and for your actions see things through?
+                Are you someone who is always think to learn something latest and
+                just doesn't get satisfied with anything less than the best satisfactory?
+                Well then, we would love to discuss with you.
+                Asterisc Technocrat think you would like us Some of our current opening positions are listed on like
+                indeed & another job portal! Nevertheless,
+                even if you don't find an suitable opening position here, you can always write to contact us at <a
+                    href="mailto: hello@asterisc.com"><i>hello@asterisc.in</i></a>. <br />We might just finish up
+                creating position for you if we love meeting with you.</p>
+        </div>
+        <div class="video"><iframe width="900" height="450" src="https://www.youtube.com/embed/h1yyJm-cZbY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+
+        <div class="info">
+            <h2>We are Hiring! Your skills are valuable</h2>
+            <p> Please apply on a suitable position for your profile from here itself and our representative members
+                will get back to you. <br />Directly you can contact us <a
+                    href="mailto: hr@asterisc.com"><i>hr@asterisc.in</i></a> or show up considering a walk-in.
+            </p>
+            <h3 style="margin-top: 40px;">Or Join our indurstrial standard training</h3>
+
+            <a href="http://staging.asterisc.in/" target="_blank" class="btn btn-success"
+                style="vertical-align:middle; border-radius: 7%;"><span>Join Training </span></a>
+
+        </div>
+    </center>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <b>
+                                <p style="color: #fff;">Asterisc<span
+                                    style="color:rgb(49 7 49);padding: 0;">Technocrat</span></p>
+                                                    </b></li>
+                        </a>
+                        <p class="mt-3 mb-4">is a innovative on e-commerce company based in Nagpur. With 22+ teams & we
+                            are leading the tech provision charge for top brands on social media & searching platforms
+                            with "secure access service any time & any where".</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Quick Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#web1"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Website Design</a>
+                                <a class="text-light mb-2" href="#web1"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>e-Commerce </a>
+                                <a class="text-light mb-2" href="#web1"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Logo Design</a>
+                                <a class="text-light mb-2" href="#web2"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Digital Marketing </a>
+                                <a class="text-light mb-2" href="#web2"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Mobile Application </a>
+                                <a class="text-light" href="#web2"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Web
+                                    Maintainance</a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Popular Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: smaller;"></i> Software Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: small;"></i>Mobile App Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: small;"></i>Web App Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: small;"></i>IT Consulting Services</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: smaller;"></i>SEO Services & Support</a>
+                                <a class="text-light" href="#"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Branding</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Get In Touch</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <a class="mb-0" href="https://g.page/technocratasterisc?gm">151, Friends Colony,</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <a class="mb-0" href="https://g.page/technocratasterisc?gm">Katol Road, Nagpur</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <a class="mb-0" href="tel:91-7744822228">&nbsp; +91 7744822228</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-mailto text-primary me-2"></i>
+                                <a class="mb-0" href="mailto: hello@asterisc.com"><i class="fa fa-envelope"></i>&nbsp;
+                                    hello@asterisc.in</a>
+                            </div>
+                            <div class="d-flex mt-4"> <a class="btn btn-primary btn-square me-2"
+                                    href="https://twitter.com/asterisci?lang=en"><i
+                                        class="fab fa-twitter fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square me-2"
+                                    href="https://www.facebook.com/technocrat.asterisc"><i
+                                        class="fab fa-facebook-f fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square me-2"
+                                    href="https://www.linkedin.com/company/asterisc-technocrat/"><i
+                                        class="fab fa-linkedin-in fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square me-2"
+                                    href="https://www.youtube.com/channel/UCJmQmyn08Mh7K0Ywwu4aWGws"><i
+                                        class="fab fa-youtube fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/asterisc.in/"><i
+                                        class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white " href="#">Copyright @2021 | Designed With &nbsp;<i
+                                    class="fa fa-heart"></i>&nbsp; by <a
+                                    href="https://g.page/technocratasterisc?share">Asterisc Technocrat Pvt. Ltd.</a>
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

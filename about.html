@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Asterisc - Startup Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        @media (min-width: 992px) {
+            .abc {
+                flex: 0 0 auto;
+                width: 24.33333%;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar, .navbar-expand-lg, .navbar-dark, .px-5 .py-3 .py-lg-0{
+                background-color: #372c37 ;
+            }
+        }
+
+
+        /* timeline*/
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #474e5d;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .containertime {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .containertime::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #474e5d;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #474e5d;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #474e5d;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #474e5d transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+
+        /* The actual content */
+        .contenttime {
+            padding: 20px 30px;
+            background-color: #474e5d;
+            position: relative;
+            border-radius: 6px;
+            line-height: 25px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .containertime {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .containertime::before {
+                left: 60px;
+                border: medium solid #474e5d;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #474e5d transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after,
+            .right::after {
+                left: 15px;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+        }
+
+
+
+        /* our team */
+        .try {
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .try h2 {
+            font-size: 30px;
+        }
+
+        .teamcard {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 20%;
+            float: left;
+            margin: 50px 30px;
+        }
+
+        .teamcard:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .ourteamcontainer {
+            padding: 10px 16px;
+            line-height: 20px;
+        }
+
+        /*our team */
+    </style>
+
+    <!-- timeline-->
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="">
+                <div class="d-inline-flex align-items-center" style="height: 55px;">
+                    <a class="me-3 text-light"><i class="fa fa-briefcase -alt me-2"></i>Nagpur's Leading Website Design
+                        & Digital Marketing Company</a>
+                    <a class="me-3 text-light" href="tel: 91-7744822228"><i
+                            class="fa fa-phone-alt me-2"></i>+91-7744822228</a>
+                    <a class="text-light" href="mailto: hello@asterisc.com"><i
+                            class="fa fa-envelope-open me-2"></i>hello@asterisc.in</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <b>
+                    <p>Asterisc<span style="color: rgb(66, 154, 236);padding: 0;">Technocrat</span></p>
+                </b></li>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+             
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="service.html" class="nav-item nav-link ">Service</a>
+                    <a href="careers.html" class="nav-item nav-link">Careers</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="feature.html" class="nav-item nav-link">Our Features</a>
+                    <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
+
+
+
+                </div>
+        </nav>
+
+        <div id="header-carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/career.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5> -->
+                            <h6 class="display-1 text-white mb-md-4 animated zoomIn">IMAGINATION + CREATIVITY = Value
+                            </h6>
+                            <a href="#form1" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free
+                                Quote</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact
+                                Us</a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+    <!-- Facts Start -->
+    <div class="container-fluid facts py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+
+                <div class="abc col-lg-4 wow zoomIn" data-wow-delay="0.01s">
+                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-primary mb-0">Customers</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">100</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class=" abc col-lg-4 wow zoomIn" data-wow-delay="0.01s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-users text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Happy Clients</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">70</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="abc col-lg-4 wow zoomIn" data-wow-delay="0.02s">
+                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-primary mb-0">Projects Complete</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">50</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="abc col-lg-4 wow zoomIn" data-wow-delay="0.02s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Coffee With Clients</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">250</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Facts Start -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+                <div class="section-title position-relative pb-3 mb-5">
+
+                    <h1 class="mb-0">The Best IT Solution With 4 Years of Experience</h1>
+                </div>
+                <p class="mb-4">Asterisc Technocrat AN ISO 9001:2015 Internationally Certified & Central India's high
+                    rating for Google reviews & most trusted company in nagpur, We are a superb custom software
+                    development company in nagpur delivering impressive business IT Solutions and related services to
+                    customers across the world. Our development services are lead by our dedicated & passionate team
+                    members to provide best industry executions combined with latest technology expertise and business
+                    domain knowledge to drive digital transformation. Our expertise ability in understanding business
+                    challenges and professional competence allows us to create a better experience for our customers.
+
+                    At Asterisc Technocrat, we care of our employees and our clients, they are most important part in
+                    our company. We cuddle clan strategic culture where every individual gets an equal opportunity of
+                    growth & great exposure. We value our team and provide work-life balance and make their career
+                    progressive and admirable.</p>
+                <div class="col-lg-7">
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Happy Clients</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s"
+                        href="tel: 91-7744822228">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <a href="tel: 91-7744822228"> <i class="fa fa-phone-alt text-white"></i></a>
+                        </div>
+                        <div class="ps-4">
+                            <a class="mb-2" href="tel: 91-7744822228">
+                                <h4>Call to ask any question</h5>
+                            </a>
+                            <a class="text-primary mb-0" href="tel: 91-7744822228">
+                                <h4> +91-7744822228</h4>
+                            </a>
+
+                        </div>
+                    </div>
+                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request
+                        A Quote</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!--TimeLine-->
+    <div class="timeline">
+        <div>
+            <div>
+                <p><br /><br /><br /></p>
+            </div>
+        </div>
+        <div class="containertime left">
+            <div class="contenttime">
+                <h2>2021 - Live Update</h2>
+                <p>Today's we are leading for high rating reviews with a best quality review form our team members & our
+                    customers. We keep track in-process results and improved quality score continuously to get improved
+                    results consistently.</p>
+            </div>
+        </div>
+        <div class="containertime right">
+            <div class="contenttime">
+                <h2>2020 - Better Quality Review </h2>
+                <p>Our company have successfully served for more than 52+ success stories ranging from Enterprise level
+                    to Start-ups, who have grown alongside the success of our company establishment And we Reached with
+                    a Better Quality Review Form Our team members & our customers.</p>
+            </div>
+        </div>
+        <div class="containertime left">
+            <div class="contenttime">
+                <h2>2019 - Our Wonderful Beginnings</h2>
+                <p>ASTERISC TECHNOCRAT established Year in 2019 with our motive to provide Strategy & Career Skills to
+                    develop locally and reach our sectors global world. We planned to provide the latest skills matching
+                    bright Career for our employees & also provide own customized solutions for every sector by our
+                    expertise team members.</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p><br /><br /><br /></p>
+            </div>
+        </div>
+    </div>
+    <!--TimeLine-->
+    <section style="background-color: #ffffff;">
+
+        <!-- Team Start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h3 class="fw-bold text-primary text-uppercase">Meet Us</h3>
+                    <h5 class="mb-0">Meet Our Core Company Body that Expert in there Industry defining the future of our
+                        company.</h5>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/shrikant.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
+                                            class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded"
+                                        href="https://www.facebook.com/shrikant.bobade" target="_blank"><i
+                                            class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded"
+                                        href="https://www.instagram.com/shrikant.bobade/?next=%2F" target="_blank"><i
+                                            class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
+                                            class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Shrikant Bobade </h4>
+                                <p class="text-uppercase m-0">Director</p>
+                                <center>Which is worse, that everyone has his price, or that the price is always so low.
+                                </center>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/chandrakant.png" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
+                                            class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded"
+                                        href="https://www.facebook.com/mr.chandrakant22" target="_blank"><i
+                                            class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded"
+                                        href="https://www.instagram.com/mr.chandrakant22/?next=%2F" target="_blank"><i
+                                            class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
+                                            class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">CHANDRAKANT BOBADE</h4>
+                                <p class="text-uppercase m-0">CEO / INSTRUCTOR</p>
+                                <center>I'm killing time while I wait for life to shower me with meaning and happiness.
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/pooja.png" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
+                                            class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded"
+                                        href="https://www.facebook.com/pooja.sao.5" target="_blank"><i
+                                            class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded"
+                                        href="https://www.instagram.com/poojasao22/?next=%2F" target="_blank"><i
+                                            class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
+                                            class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">POOJA SAO</h4>
+                                <p class="text-uppercase m-0">MANAGER / INSTRUCTOR</p>
+                                <center>The only skills I have the patience to learn are those that have no real
+                                    application in life.</center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Team End -->
+    </section>
+    <!-- members start-->
+    <section style="background-color: #f1f0f5;">
+
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h1 class="fw-bold text-primary text-uppercase">Meet Our Team</h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/vnit.jpg" alt="">
+
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Vinit Dhanvijay</h4>
+                                <p class="text-uppercase m-0">Business Associate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/madhurima.jpg" alt="">
+
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Dr.Madhurima Nayak</h4>
+                                <p class="text-uppercase m-0">Brand Ambassador</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/haris.jpg" alt="">
+
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Haris Khan</h4>
+                                <p class="text-uppercase m-0">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/tushar.jpg" alt="">
+
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Tushar Dhanvijay</h4>
+                                <p class="text-uppercase m-0">Digital Marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- members End -->
+    </section>
+
+
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div style="align-items: center;">
+                <div class="section-title position-relative pb-3 mb-5">
+
+                    <h1 class="mb-0">Want to join Us?</h1>
+                </div>
+                <p>Please apply on a suitable position for your profile from here itself and our representative members
+                    will get back to you. <br />Directly you can contact us <i>hr@asterisc.in</i> or show up considering
+                    a walk-in.
+                </p>
+            </div>
+            <h3 style="margin-top: 40px;">Or Join our indurstrial standard training</h3>
+            <div class="col-lg-7">
+                <a href="http://staging.asterisc.in" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn"
+                    data-wow-delay="0.9s">Join Training </a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+                    <img src="img/sagar.jpg" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <b>
+                                <p style="color: #fff;">Asterisc<span
+                                    style="color:rgb(49 7 49);padding: 0;">Technocrat</span></p>
+                        </b></li>
+                        </a>
+                        <p class="mt-3 mb-4">is a innovative on e-commerce company based in Nagpur. With 22+ teams & we
+                            are leading the tech provision charge for top brands on social media & searching platforms
+                            with "secure access service any time & any where".</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Quick Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#web1"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Website Design</a>
+                                <a class="text-light mb-2" href="#web1"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>e-Commerce </a>
+                                <a class="text-light mb-2" href="#web1"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Logo Design</a>
+                                <a class="text-light mb-2" href="#web2"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Digital Marketing </a>
+                                <a class="text-light mb-2" href="#web2"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Mobile Application </a>
+                                <a class="text-light" href="#web2"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Web
+                                    Maintainance</a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Popular Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: smaller;"></i> Software Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: small;"></i>Mobile App Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: small;"></i>Web App Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: small;"></i>IT Consulting Services</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"
+                                        style="font-size: smaller;"></i>SEO Services & Support</a>
+                                <a class="text-light" href="#"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Branding</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Get In Touch</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <a class="mb-0" href="https://g.page/technocratasterisc?gm">151, Friends Colony,</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <a class="mb-0" href="https://g.page/technocratasterisc?gm">Katol Road, Nagpur</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <a class="mb-0" href="tel:91-7744822228">&nbsp; +91 7744822228</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-mailto text-primary me-2"></i>
+                                <a class="mb-0" href="mailto: hello@asterisc.com"><i class="fa fa-envelope"></i>&nbsp;
+                                    hello@asterisc.in</a>
+                            </div>
+                            <div class="d-flex mt-4"> <a class="btn btn-primary btn-square me-2"
+                                    href="https://twitter.com/asterisci?lang=en"><i
+                                        class="fab fa-twitter fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square me-2"
+                                    href="https://www.facebook.com/technocrat.asterisc"><i
+                                        class="fab fa-facebook-f fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square me-2"
+                                    href="https://www.linkedin.com/company/asterisc-technocrat/"><i
+                                        class="fab fa-linkedin-in fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square me-2"
+                                    href="https://www.youtube.com/channel/UCJmQmyn08Mh7K0Ywwu4aWGws"><i
+                                        class="fab fa-youtube fw-normal"></i></a>
+
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/asterisc.in/"><i
+                                        class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white " href="#">Copyright @2021 | Designed With &nbsp;<i
+                                    class="fa fa-heart"></i>&nbsp; by <a
+                                    href="https://g.page/technocratasterisc?share">Asterisc Technocrat Pvt. Ltd.</a>
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
